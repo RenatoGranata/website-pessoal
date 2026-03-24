@@ -16,16 +16,6 @@ a:hover {
 }
 
 body {
-  /* background-color: #020617; */
-
-  /* background: linear-gradient(
-    135deg,
-    #020617,
-    #0f172a,
-    #1e1b4b
-  ); */
-
-  /* background: radial-gradient(circle at center, #0f172a 0%, #020617 70%); */
 
   background: radial-gradient(circle at 20% 20%, #0f172a, #020617 60%), radial-gradient(circle at 80% 80%, #1e1b4b, transparent 60%),#020617;
 
@@ -50,8 +40,8 @@ header {
 
   box-shadow: 0 0 5px 1px rgba(0, 255, 255, 0.5),
     0 0 15px 7px rgba(0, 255, 255, 0.3);
-
   animation: shadow 1s alternate infinite;
+
 
 }
 
@@ -83,6 +73,8 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
+
+  overflow: hidden;
 }
 
 #hero {
@@ -106,6 +98,25 @@ main {
   font-size: 3rem;
 }
 
+#hero-titles {
+  position: relative;
+
+  top: 5rem;
+  opacity: 0;
+
+  animation: fade-in 2s forwards;
+}
+@keyframes fade-in {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+
+  }
+}
+
 #hero-titles p:first-child {
   font-size: 1.5rem;
 }
@@ -121,6 +132,20 @@ main {
 
 #hero-text {
   width: 30rem;
+  position: relative;
+
+  left: -15rem;
+  opacity: 0;
+  animation: fade-left 2s forwards; 
+}
+@keyframes fade-left {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
 }
 
 #hero-links {
@@ -128,14 +153,56 @@ main {
   align-items: center;
 
   gap: 0.3rem;
+
+  overflow: hidden;
+  
 }
 
 #hero-links a {
 
-  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.5rem;
-  border-radius: 1rem;
-  transition: background ease-out 0.1s
+  border: 1px solid;
+  border-radius: 100%;
+  position: relative;
+  transition: background ease-out 0.1s;
+}
+.devicon-linkedin-plain{
+  /* font-size: 1rem; */
+  /* color: red; */
+}
+
+#hero-links a:first-child {
+  /* top: 5rem; */
+  transform: translate(0, 5rem);
+  animation: fade-up 1s forwards;
+}
+#hero-links a:nth-child(2) {
+  transform: translate(0, 5rem);
+  animation: fade-up 1.3s forwards;
+}
+#hero-links a:nth-child(3) {
+  /* font-size: 1.1rem; */
+  transform: translate(0, 5rem);
+  animation: fade-up 1.5s forwards;
+}
+#hero-links a:nth-child(4) {
+  /* font-size: 1.1rem; */
+  transform: translate(0, 5rem);
+  animation: fade-up 1.7s forwards;
+}
+
+@keyframes fade-up {
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
 #hero-btn a {
@@ -152,8 +219,27 @@ main {
 #hero-links a:hover {
   color: #020617;
   background: #22d3ee;
-  border-color: #8b5cf6;
+  border: 1px solid #22d3ee;
 
+}
+
+#hero-btn {
+  overflow: hidden;
+}
+#hero-btn a {
+  position: relative;
+  opacity: 0;
+  transform: translate(0, -5rem);
+  animation: fade-down 1.5s forwards;
+}
+@keyframes fade-down {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0)
+  }
 }
 
 #hero-img {
@@ -171,10 +257,7 @@ main {
 
   background: radial-gradient(circle at 30% 30%, #0ea5e9, #020617 70%);
 
-  /* background: #020617;
-  box-shadow: inset 0 0 40px rgba(0, 255, 255, 0.2); */
-
-  /* background: linear-gradient(135deg, #0f172a, #312e81, #06b6d4); */
+  
 
   display: flex;
   align-items: end;
@@ -189,6 +272,17 @@ main {
 
 #hero-img-container {
   position: relative;
+
+  transform: translate(50vw, 0);
+  opacity: 0;
+  animation: show-up 2s forwards;
+}
+@keyframes show-up {
+  
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
 .orbit {
