@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre - Renato</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
 
   <header>
     <h1>&lt;/R.dev&gt;</h1>
-
     <nav>
       <ul>
         <li><a href="../home/index.html">Início</a></li>
@@ -25,62 +22,155 @@
     </nav>
   </header>
 
-
   <main>
     <section id="about">
-      <div id="about-container">
 
+      <div id="about-top">
 
         <div id="about-text">
-          <h2>Sobre mim</h2>
-
-
-          <p>
-            Olá! Me chamo Renato e sou desenvolvedor Front-End apaixonado por criar interfaces modernas, funcionais e
-            com ótima experiência para o usuário.
+          <p class="about-eyebrow">Olá, eu sou</p>
+          <h2>Renato</h2>
+          <p class="about-role">Desenvolvedor <span class="highlight">Front-End</span></p>
+          <p class="about-bio">
+            Apaixonado por criar interfaces modernas, funcionais e com ótima experiência para o usuário.
+            Sempre em busca de evoluir com novas tecnologias e boas práticas de desenvolvimento.
           </p>
-
-          <p>
-            Tenho foco em HTML, CSS e JavaScript, e estou sempre buscando evoluir minhas habilidades com novas
-            tecnologias e boas práticas de desenvolvimento.
+          <p class="about-bio">
+            Atualmente em busca de uma oportunidade como <strong>estagiário ou desenvolvedor júnior</strong>
+            para crescer profissionalmente e contribuir com projetos reais.
           </p>
-
-          <p>
-            Atualmente estou em busca de uma oportunidade como estagiário ou desenvolvedor júnior para crescer
-            profissionalmente e contribuir com projetos reais.
-          </p>
-
           <div id="about-buttons">
-            <a href="#">Baixar CV</a>
-            <a href="#">Contato</a>
+            <a href="#" class="btn-primary">Baixar CV</a>
+            <a href="#" class="btn-secondary">Contato</a>
           </div>
         </div>
 
+        <div id="about-skills">
 
-        <div id="about-cards">
-
-          <div class="about-card">
-            <h3>Foco</h3>
-            <p>Front-End moderno e responsivo</p>
+          <div class="skills-group" style="--g:0">
+            <h3 class="group-label lang-label">Linguagens</h3>
+            <div class="pills-row">
+              <span class="pill lang" style="--i:0">
+                <i class="devicon-javascript-plain colored"></i> JavaScript
+              </span>
+              <span class="pill lang" style="--i:1">
+                <i class="devicon-typescript-plain colored"></i> TypeScript
+              </span>
+              <span class="pill lang" style="--i:2">
+                <i class="devicon-python-plain colored"></i> Python
+              </span>
+            </div>
           </div>
 
-          <div class="about-card">
-            <h3>Tecnologias</h3>
-            <p>HTML, CSS, JavaScript</p>
+          <div class="skills-group" style="--g:1">
+            <h3 class="group-label lib-label">Frameworks & Libs</h3>
+            <div class="pills-row">
+              <span class="pill lib" style="--i:0">
+                <i class="devicon-react-original colored"></i> React
+              </span>
+              <span class="pill lib" style="--i:1">
+                <i class="devicon-nextjs-plain icon-light"></i> Next.js
+              </span>
+              <span class="pill lib" style="--i:2">
+                <i class="devicon-react-original colored"></i> React Native
+              </span>
+            </div>
           </div>
 
-          <div class="about-card">
-            <h3>Estudando</h3>
-            <p>React, APIs e boas práticas</p>
+          <div class="skills-group" style="--g:2">
+            <h3 class="group-label style-label">Markup & Estilização</h3>
+            <div class="pills-row">
+              <span class="pill style" style="--i:0">
+                <i class="devicon-html5-plain colored"></i> HTML
+              </span>
+              <span class="pill style" style="--i:1">
+                <i class="devicon-css3-plain colored"></i> CSS
+              </span>
+              <span class="pill style" style="--i:2">
+                <i class="devicon-tailwindcss-original colored"></i> Tailwind
+              </span>
+              <span class="pill style" style="--i:3">
+                <i class="devicon-sass-original colored"></i> SASS
+              </span>
+            </div>
           </div>
 
+          <div class="skills-group" style="--g:3">
+            <h3 class="group-label tool-label">Ferramentas</h3>
+            <div class="pills-row">
+              <span class="pill tool" style="--i:0">
+                <i class="devicon-nodejs-plain colored"></i> Node.js
+              </span>
+              <span class="pill tool" style="--i:1">
+                <i class="devicon-git-plain colored"></i> Git
+              </span>
+              <span class="pill tool" style="--i:2">
+                <i class="devicon-github-original icon-light"></i> GitHub
+              </span>
+              <span class="pill tool" style="--i:3">
+                <i class="devicon-vscode-plain colored"></i> VSCode
+              </span>
+              <span class="pill tool" style="--i:4">
+                <i class="devicon-figma-plain colored"></i> Figma
+              </span>
+              <span class="pill tool" style="--i:5">
+                <i class="devicon-notion-plain icon-light"></i> Notion
+              </span>
+            </div>
+          </div>
+
+          <div class="skills-group" style="--g:4">
+            <h3 class="group-label ai-label">Inteligência Artificial</h3>
+            <div class="pills-row">
+              <span class="pill ai" style="--i:0">
+                <i class="devicon-openai-plain icon-light"></i> ChatGPT
+              </span>
+              <span class="pill ai" style="--i:1">
+                <span class="icon-emoji">🧠</span> Claude
+              </span>
+              <span class="pill ai" style="--i:2">
+                <i class="devicon-google-plain colored"></i> Gemini
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="section-divider">
+        <span>destaques</span>
+      </div>
+
+      <div id="about-cards">
+
+        <div class="about-card" style="--i:0">
+          <div class="card-icon-wrap lang-icon">
+            <i class="devicon-html5-plain colored"></i>
+          </div>
+          <h3>Especialidade</h3>
+          <p>Interfaces responsivas com foco em usabilidade e performance no Front-End</p>
+        </div>
+
+        <div class="about-card" style="--i:1">
+          <div class="card-icon-wrap lib-icon">
+            <i class="devicon-react-original colored"></i>
+          </div>
+          <h3>Estudando agora</h3>
+          <p>Aprofundando em React, Next.js e consumo de APIs REST</p>
+        </div>
+
+        <div class="about-card" style="--i:2">
+          <div class="card-icon-wrap goal-icon">
+            <span>🎯</span>
+          </div>
+          <h3>Objetivo</h3>
+          <p>Primeiro emprego como estagiário ou dev júnior para contribuir com projetos reais</p>
         </div>
 
       </div>
+
     </section>
-
   </main>
-
 
   <footer>
     <div id="footer-copy">
@@ -89,5 +179,4 @@
   </footer>
 
 </body>
-
 </html>
