@@ -155,8 +155,29 @@ nav ul {
 }
 
 footer {
-  padding: 2rem;
-  text-align: center;
+  /* margin-top: 3rem; */
+  padding: 2rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border-top: 1px solid cyan;
-  margin-top: 3rem;
+
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+
+  background: linear-gradient(to top,
+      #020617,
+      #0f172a);
+
+  animation: shadow 2s alternate infinite;
+
+  box-shadow: 0 -5px 30px rgba(0, 255, 255, 0.1);
+}
+
+#footer-copy {
+  text-align: center;
+
+  font-size: 0.8rem;
+  opacity: 0.6;
 }
