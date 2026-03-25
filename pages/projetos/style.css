@@ -7,35 +7,26 @@
 body {
   font-family: sans-serif;
   color: white;
-
   background: radial-gradient(circle at 20% 20%, #0f172a, #020617 60%), radial-gradient(circle at 80% 80%, #1e1b4b, transparent 60%), #020617;
-  
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 1rem 3rem;
-
   border-bottom: 1px solid cyan;
   border-radius: 0.3rem;
-
-  box-shadow: 0 0 5px 1px rgba(0, 255, 255, 0.5),
-    0 0 15px 7px rgba(0, 255, 255, 0.3);
-
   animation: shadow 1s alternate infinite;
 }
+
 @keyframes shadow {
   from {
     box-shadow: 0 0 5px 1px rgba(0, 255, 255, 0.5);
   }
-
   to {
     box-shadow: 0 0 5px 1px rgba(0, 255, 255, 0.5),
       0 0 15px 7px rgba(0, 255, 255, 0.3);
@@ -61,6 +52,7 @@ a {
 a:hover {
   color: white;
 }
+
 main {
   flex: 1;
 }
@@ -76,24 +68,34 @@ main {
   font-size: 2.5rem;
 }
 
-
 #projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
+@media (max-width: 900px) {
+  #projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #projects-container {
+    grid-template-columns: 1fr;
+  }
+}
 
 .project-card {
   border-radius: 1rem;
   overflow: hidden;
-
   background: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(10px);
-
   border: 1px solid rgba(34, 211, 238, 0.2);
-
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card:hover {
@@ -101,17 +103,29 @@ main {
   box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
 }
 
-
 .project-img {
   height: 180px;
-
-  background: linear-gradient(135deg, #0f172a, #1e1b4b, #22d3ee);
+  overflow: hidden;
+  display: flex;
 }
 
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.project-card:hover .project-img img {
+  transform: scale(1.05);
+}
 
 .project-content {
   padding: 1.5rem;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .project-content h3 {
@@ -125,7 +139,6 @@ main {
   margin-bottom: 1rem;
 }
 
-
 .techs {
   display: flex;
   flex-wrap: wrap;
@@ -136,15 +149,14 @@ main {
 .techs span {
   font-size: 0.75rem;
   padding: 0.3rem 0.6rem;
-
   border-radius: 0.5rem;
   background: rgba(34, 211, 238, 0.2);
 }
 
-
 .project-links {
   display: flex;
   gap: 1rem;
+  margin-top: auto;
 }
 
 .project-links a {
@@ -158,29 +170,24 @@ main {
   color: #020617;
 }
 
+.project-card.empty {
+  opacity: 0;
+  pointer-events: none;
+}
 
 footer {
-  /* margin-top: 3rem; */
   padding: 2rem 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-top: 1px solid cyan;
-
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
-
   background: linear-gradient(to top, #020617, #0f172a);
-
   animation: shadow 2s alternate infinite;
-
   box-shadow: 0 -5px 30px rgba(0, 255, 255, 0.1);
 }
 
 #footer-copy {
   text-align: center;
-
   font-size: 0.8rem;
   opacity: 0.6;
 }
